@@ -137,6 +137,11 @@ body {
   line-height: 1;
   margin: 0 10% 0 10%;
 }
+@media (max-width:500px) {
+  body {
+    margin: 0;
+  }
+}
 ol,
 ul {
   list-style: none;
@@ -206,11 +211,22 @@ header > nav > div {
   align-items: center;
   width: 100%;
 }
+@media (max-width:500px) {
+  header > nav > div {
+    flex-direction: column;
+  }
+}
 header > nav > div > div {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
+}
+@media (max-width:500px) {
+  header > nav > div > div {
+    border-top: white 1px solid;
+    width: 100%;
+  }
 }
 header > div {
   border-top: 1px solid white;
@@ -220,6 +236,11 @@ header > div {
 header > div > div {
   display: flex;
   width: 60%;
+}
+@media (max-width:500px) {
+  header > div > div {
+    width: 100%;
+  }
 }
 header > div > div > div {
   display: flex;
@@ -254,12 +275,32 @@ section {
   color: black;
   margin-top: 1.5%;
 }
+@media (max-width:500px) {
+  section {
+    margin-top: 5%;
+  }
+}
 section > p {
   margin-top: 1.5%;
   font-size: 100%;
 }
+@media (max-width:500px) {
+  section > p {
+    margin-top: 5%;
+  }
+}
 section > h2 {
   margin-top: 1.5%;
+}
+@media (max-width:500px) {
+  section > h2 {
+    margin-top: 5%;
+  }
+}
+@media (max-width:500px) {
+  section {
+    margin: 0 5% 0 5%;
+  }
 }
 footer {
   background-color: #8B0000;
@@ -275,4 +316,9 @@ footer > div {
   justify-content: space-around;
   margin-top: 1.5%;
   font-size: 200%;
+}
+@media (max-width:500px) {
+  footer > div {
+    margin-top: 5%;
+  }
 }

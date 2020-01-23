@@ -34,9 +34,15 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
+//Media Queries
+@iPhone: ~"(max-width:500px)";
+
 body {
 	line-height: 1;
 	margin: 0 10% 0 10%;
+	@media @iPhone {
+		margin:0;
+	}
 }
 
 ol, ul {
@@ -65,6 +71,7 @@ table {
 @body-font: 'Montserrat', sans-serif;
 @gray-text:#A9A9A9;
 @margin-top:1.5%;
+@margin-top-mobile:5%;
 
 html, body {
 	height: 100%;
@@ -121,10 +128,17 @@ header {
 			.spaceAround();
 			align-items:center;
 			width:100%;
+			@media @iPhone {
+				flex-direction:column;
+			}
 			> div {
 				.centerContent();
 				align-items:center;
 				padding:20px;
+				@media @iPhone {
+					border-top:white 1px solid;
+					width:100%;
+				}
 			}
 		}
 	}
@@ -134,6 +148,9 @@ header {
 		> div {
 			display:flex;
 			width:60%;
+			@media @iPhone {
+				width:100%;
+			}
 			> div {
 				.centerContent();
 				flex-direction:column;
@@ -170,12 +187,24 @@ header {
 section {
 	color:black;
 	margin-top:@margin-top;
+	@media @iPhone {
+		margin-top:@margin-top-mobile;
+	}
 	> p {
 		margin-top:@margin-top;
 		font-size:100%;
+		@media @iPhone {
+			margin-top:@margin-top-mobile;
+		}
 	}
 	> h2 {
 		margin-top:@margin-top;
+		@media @iPhone {
+			margin-top:@margin-top-mobile;
+		}
+	}
+	@media @iPhone {
+		margin:0 5% 0 5%;
 	}
 }
 
@@ -191,5 +220,8 @@ footer {
 		.spaceAround();
 		margin-top:@margin-top;
 		font-size:200%;
+		@media @iPhone {
+			margin-top:@margin-top-mobile;
+		}
 	}
 }
