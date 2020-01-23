@@ -187,6 +187,9 @@ a {
   color: inherit;
   text-decoration: inherit;
 }
+a:hover {
+  color: #A9A9A9;
+}
 header {
   background-color: #8B0000;
   display: flex;
@@ -205,12 +208,9 @@ header > nav > div {
 }
 header > nav > div > div {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   padding: 20px;
-}
-header > nav > div > div > a:hover {
-  color: #A9A9A9;
 }
 header > div {
   border-top: 1px solid white;
@@ -264,8 +264,15 @@ section > h2 {
 footer {
   background-color: #8B0000;
   margin-top: 1.5%;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+}
+footer h1 {
+  text-align: center;
 }
 footer > div {
   display: flex;
   justify-content: space-around;
+  margin-top: 1.5%;
+  font-size: 200%;
 }

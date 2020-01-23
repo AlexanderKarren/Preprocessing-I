@@ -33,10 +33,12 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 	margin: 0 10% 0 10%;
 }
+
 ol, ul {
 	list-style: none;
 }
@@ -94,44 +96,46 @@ a {
 	font-family:inherit;
 	color:inherit;
 	text-decoration:inherit;
+	&:hover {
+		color:@gray-text;
+	}
+}
+
+.centerContent() {
+	display:flex;
+	justify-content:center;
+}
+
+.spaceAround() {
+	display:flex;
+	justify-content:space-around;
 }
 
 header {
 	background-color:@header-color;
-	display:flex;
-	justify-content:center;
+	.centerContent();
 	flex-direction:column;
 	> nav {
-		display:flex;
-		justify-content:center;
+		.centerContent();
 		> div {
-			display:flex;
-			justify-content:space-around;
+			.spaceAround();
 			align-items:center;
 			width:100%;
 			> div {
-				display:flex;
+				.centerContent();
 				align-items:center;
-				justify-content:center;
 				padding:20px;
-					> a {
-						&:hover {
-							color:@gray-text;
-						}
-				}
 			}
 		}
 	}
 	> div {
 		border-top:1px solid white;
-		display:flex;
-		justify-content:center;
+		.centerContent();
 		> div {
 			display:flex;
 			width:60%;
 			> div {
-				display:flex;
-				justify-content: center;
+				.centerContent();
 				flex-direction:column;
 				background-color:white;
 				color:black;
@@ -178,8 +182,14 @@ section {
 footer {
 	background-color:@header-color;
 	margin-top:@margin-top;
+	padding-top:@margin-top;
+	padding-bottom:@margin-top;
+	h1 {
+		text-align:center;
+	}
 	> div {
-		display:flex;
-		justify-content: space-around;
+		.spaceAround();
+		margin-top:@margin-top;
+		font-size:200%;
 	}
 }
