@@ -187,9 +187,6 @@ header {
 section {
 	color:black;
 	margin-top:@margin-top;
-	@media @iPhone {
-		margin-top:@margin-top-mobile;
-	}
 	> p {
 		margin-top:@margin-top;
 		font-size:100%;
@@ -204,7 +201,9 @@ section {
 		}
 	}
 	@media @iPhone {
-		margin:0 5% 0 5%;
+		margin-top:@margin-top-mobile;
+		margin-left:@margin-top-mobile;
+		margin-right:@margin-top-mobile;
 	}
 }
 

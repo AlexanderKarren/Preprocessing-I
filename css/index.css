@@ -275,11 +275,6 @@ section {
   color: black;
   margin-top: 1.5%;
 }
-@media (max-width:500px) {
-  section {
-    margin-top: 5%;
-  }
-}
 section > p {
   margin-top: 1.5%;
   font-size: 100%;
@@ -299,7 +294,9 @@ section > h2 {
 }
 @media (max-width:500px) {
   section {
-    margin: 0 5% 0 5%;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 }
 footer {
