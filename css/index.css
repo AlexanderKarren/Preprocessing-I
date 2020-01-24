@@ -1,1 +1,321 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@font-face {
+  font-family: 'Alata';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Alata Regular'), local('Alata-Regular'), url(https://fonts.gstatic.com/s/alata/v1/PbytFmztEwbIoce9zqM.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459Wlhzg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'PT Sans Narrow';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('PT Sans Narrow'), local('PTSans-Narrow'), url(https://fonts.gstatic.com/s/ptsansnarrow/v11/BngRUXNadjH0qYEzV7ab-oWlsbCGwRg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  max-width: 100%;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  margin: 0 10% 0 10%;
+}
+@media (max-width:500px) {
+  body {
+    margin: 0;
+  }
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+h1 {
+  font-family: 'Alata', sans-serif;
+  font-size: 130%;
+}
+h2 {
+  font-family: 'Alata', sans-serif;
+}
+p {
+  font-size: 80%;
+  width: 100%;
+}
+.title {
+  font-size: 100%;
+  font-style: italic;
+  color: #A9A9A9;
+}
+a {
+  font-family: inherit;
+  color: inherit;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #A9A9A9;
+}
+header {
+  background-color: #8B0000;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+header > nav {
+  display: flex;
+  justify-content: center;
+}
+header > nav > div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+@media (max-width:500px) {
+  header > nav > div {
+    flex-direction: column;
+  }
+}
+header > nav > div > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+@media (max-width:500px) {
+  header > nav > div > div {
+    border-top: white 1px solid;
+    width: 100%;
+  }
+}
+header > div {
+  border-top: 1px solid white;
+  display: flex;
+  justify-content: center;
+}
+header > div > div {
+  display: flex;
+  width: 60%;
+}
+@media (max-width:500px) {
+  header > div > div {
+    width: 100%;
+  }
+}
+header > div > div > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  color: black;
+}
+header > div > div > div:first-child {
+  width: 40%;
+}
+header > div > div > div:last-child {
+  width: 60%;
+}
+header > div > div > div:last-child > div {
+  width: 100%;
+  margin-left: 5%;
+}
+header > div > div > div:last-child > div p,
+header > div > div > div:last-child > div h1 {
+  margin: 2.5px 0 2.5px 0;
+  width: 100%;
+}
+header > div > div > div:last-child > div > div {
+  margin-top: 20px;
+}
+header > div > div > div:last-child > div > div > p > span {
+  font-family: 'Alata', sans-serif;
+  font-size: 110%;
+}
+section {
+  color: black;
+  margin-top: 1.5%;
+}
+section > p {
+  margin-top: 1.5%;
+  font-size: 100%;
+}
+@media (max-width:500px) {
+  section > p {
+    margin-top: 5%;
+  }
+}
+section > h2 {
+  margin-top: 1.5%;
+}
+@media (max-width:500px) {
+  section > h2 {
+    margin-top: 5%;
+  }
+}
+@media (max-width:500px) {
+  section {
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+footer {
+  background-color: #8B0000;
+  margin-top: 1.5%;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+}
+footer h1 {
+  text-align: center;
+}
+footer > div {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1.5%;
+  font-size: 200%;
+}
+@media (max-width:500px) {
+  footer > div {
+    margin-top: 5%;
+  }
+}
